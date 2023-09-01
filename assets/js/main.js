@@ -9,13 +9,16 @@ playBtn.addEventListener("click", function () {
 
 function createTable(DOMelement, maxSquareNumber) {
     for (let i = 0; i < maxSquareNumber; i++) {
-        const square = `<div class="square">${i + 1}</div>`;
+        const square = document.createElement("div");
         console.log(square);
-        DOMelement.innerHTML += square;
-        playBtn.classList.add("d-none");
+        square.className = "square";
+        square.append(i+1);
+        gameTable.append(square);
 
+        playBtn.classList.add("d-none");
+        
         square.addEventListener("click", function () {
-            square.classList.add("green-square");
+            square.classList.toggle("green-square");
         })
     }
 }
