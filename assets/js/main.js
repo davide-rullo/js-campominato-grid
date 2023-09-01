@@ -1,7 +1,10 @@
 
 const gameTable = document.getElementById("game-table");
 const maxSquareNumber = 100;
-
+const playBtn = document.getElementById("start-btn")
+playBtn.addEventListener("click", function(){
+    createTable(gameTable, 100)
+});
 
 
 function createTable (DOMelement, maxSquareNumber){
@@ -9,5 +12,6 @@ function createTable (DOMelement, maxSquareNumber){
         const square = `<div class="square">${i + 1}</div>`;
         console.log(square);
         DOMelement.innerHTML += square;
+        playBtn.classList.add("d-none");
     }
 }

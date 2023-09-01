@@ -30,3 +30,14 @@ body{
 .green-square{
     background-color: #7FFFD4;
 }
+
+.play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.d-none{
+    display: none;
+}
