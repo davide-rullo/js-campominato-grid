@@ -10,7 +10,7 @@ playBtn.addEventListener("click", function () {
 function createTable(DOMelement, maxSquareNumber) {
     for (let i = 0; i < maxSquareNumber; i++) {
         const square = document.createElement("div");
-        console.log(square);
+       
         square.className = "square";
         square.append(i+1);
         gameTable.append(square);
@@ -19,6 +19,7 @@ function createTable(DOMelement, maxSquareNumber) {
         
         square.addEventListener("click", function () {
             square.classList.toggle("green-square");
+            console.log("Clic sulla casella " + (i + 1));
         })
     }
 }
